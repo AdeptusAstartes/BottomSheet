@@ -57,6 +57,10 @@ class BottomSheetViewController<Content: View>: UIViewController, UISheetPresent
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let visualEffectsView = UIVisualEffectView(effect: UIBlurEffect(style: .regular))
+        visualEffectsView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.addSubview(visualEffectsView)
 
         addChild(contentView)
         view.addSubview(contentView.view)
