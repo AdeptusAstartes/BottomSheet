@@ -61,6 +61,7 @@ class BottomSheetViewController<Content: View>: UIViewController, UISheetPresent
         addChild(contentView)
         view.addSubview(contentView.view)
 
+        contentView.view.bacgroundColor = .clear
         contentView.view.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
